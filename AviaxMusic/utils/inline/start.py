@@ -8,7 +8,7 @@ def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=" Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⛦",
+                text="⛦ Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⛦",
                 url=f"https://t.me/{app.username}?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users+",
             )
         ],
@@ -31,23 +31,18 @@ def private_panel(_):
                 url=f"https://t.me/{app.username}?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users+",
             )
         ],
+        [InlineKeyboardButton(
+                text="Hᴇʟᴩ", callback_data="settings_back_helper")],
         [
             InlineKeyboardButton(
-                text="Hᴇʟᴩ", callback_data="settings_back_helper"
-            )
-        ],
-        [
+                text="Uᴘᴅᴀᴛᴇs", url=config.SUPPORT_CHANNEL),
             InlineKeyboardButton(
-                text="Uᴘᴅᴀᴛᴇs", url=config.SUPPORT_CHANNEL
-            ),
-            InlineKeyboardButton(
-                text="Oᴡɴᴇʀ", user_id=config.OWNER
-            )
+                text="Oᴡɴᴇʀ", user_id=config.OWNER_ID),
         ],
         [
             InlineKeyboardButton(
                 text="[❄️] Iɴᴛʀᴏᴅᴜᴄᴛɪᴏɴ [❄️]", url=f"https://t.me/addlist/MFlGJNbdpco3NTll"
-            )
+            ) 
         ],
      ]
     return buttons
